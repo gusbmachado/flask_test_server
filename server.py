@@ -7,13 +7,10 @@ CORS(app)
 @app.route('/data', methods=["GET", "PUT"])
 def get_time():
   if request.method == "GET":
-    time = 0,
-    running = '1\n',
-    line = 'Recording stopped\n', 
     return {
-        "time": time,
-        "running": running,
-        "line": line, 
+        "time": 0,
+        "running": '1\n',
+        "line": 'Recording stopped\n', 
         }
   elif request.method == "PUT":
     return {
